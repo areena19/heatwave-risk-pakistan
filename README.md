@@ -5,8 +5,13 @@
 [![Model Selection](https://img.shields.io/badge/Model-LightGBM%20Quantile-blue.svg)](https://lightgbm.readthedocs.io/)
 [![Orchestration](https://img.shields.io/badge/Orchestration-Prefect%20v3-red.svg)](https://www.prefect.io/)
 [![Frontend](https://img.shields.io/badge/Dashboard-Streamlit%20Bento-ff4b4b.svg)](https://streamlit.io/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Streamlit%20App-brightgreen.svg)](https://heatwave-risk-pakistan-9fzfrsvtpjjftzrw6bn2sf.streamlit.app/)
 
 > **An automated climate intelligence and early-warning forecasting engine designed to protect vulnerable outdoor laborers (brick kiln workers, agricultural hands, construction labor, and street vendors) across four of Pakistan's highest-risk urban and semi-arid hubs: Karachi, Lahore, Multan, and Jacobabad.**
+
+### 🔗 Live Demo
+
+**👉 [Open the PakHeat Dashboard](https://heatwave-risk-pakistan-9fzfrsvtpjjftzrw6bn2sf.streamlit.app/)**
 
 ---
 
@@ -190,7 +195,9 @@ PakHeat translates heat index forecasts into **proposed** workplace protection p
 
 ## 💻 Streamlit Bento Command Center
 
-The application features a modular **Bento Grid Command Center** (`dashboard/app.py`):
+The application is deployed on Streamlit Community Cloud: **[Live dashboard](https://heatwave-risk-pakistan-9fzfrsvtpjjftzrw6bn2sf.streamlit.app/)**.
+
+It features a modular **Bento Grid Command Center** (`dashboard/app.py`):
 
 1. **National 4-City Heatwatch Bar:** Instant multi-station comparison of tomorrow's predicted Heat Index and risk level.
 2. **Integrated Forecast Hub:** Predicted peak Heat Index, 80% conformal interval, and underlying atmospheric drivers (air temperature, relative humidity, wind speed).
