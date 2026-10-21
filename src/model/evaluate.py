@@ -83,6 +83,10 @@ def evaluate():
         q = json.load(f)["q"]
 
     _, _, test = split_by_date(load_data())
+    
+    # NaN target wali latest forecast row ko evaluation se drop karein
+    test = test.dropna(subset=["target"]).copy()
+    
     y = test["target"].values
     p10, p50, p90 = get_bounds(models, feats, test)
     lo, hi = p10 - q, p90 + q
@@ -110,9 +114,9 @@ def evaluate():
         json.dump(metrics, f, indent=2)
 
     print(f"Test rows: {metrics['test_rows']}  ({metrics['test_start']} to {metrics['test_end']})")
-    print(f"Baseline MAE: {metrics['baseline_mae']}")
-    print(f"Model MAE:    {metrics['test_mae']}")
-    print(f"Calibrated coverage: {metrics['coverage_80'] * 100:.1f}%  width {metrics['interval_width']}")
+    print(f"Baseline MAE: {metrics['baseline_mae']}°C")
+    print(f"Model MAE:    {metrics['test_mae']}°C")
+    print(f"Calibrated coverage: {metrics['coverage_80'] * 100:.1f}%  width {metrics['interval_width']}°C")
     print("\nBy city:", metrics["by_city"])
     print("\nBy season:", metrics["by_season"])
 

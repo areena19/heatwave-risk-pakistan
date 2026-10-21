@@ -10,30 +10,30 @@
 ## Data and split
 - Source: gold_features table (Open-Meteo, checked by the Data Quality Agent).
 - Split by date: train 70%, validation 15%, test 15%.
-- Test window: 2026-07-03 to 2026-10-19 (436 rows).
+- Test window: 2026-07-05 to 2026-10-20 (432 rows).
 
 ## Test results
 | Metric | Value |
 |---|---|
-| Model MAE | 1.2334 |
-| Baseline MAE (tomorrow = today) | 1.2705 |
+| Model MAE | 1.2418 |
+| Baseline MAE (tomorrow = today) | 1.2788 |
 | Improvement over baseline | 2.9% |
-| Calibrated 80% interval coverage | 87.8% |
-| Raw interval coverage | 73.6% |
-| Average interval width (C) | 4.8 |
+| Calibrated 80% interval coverage | 88.2% |
+| Raw interval coverage | 73.4% |
+| Average interval width (C) | 4.63 |
 
 ## Slices
 | city | MAE | Baseline MAE | 80% coverage | Rows |
 |---|---|---|---|---|
-| Jacobabad | 1.1413 | 1.1149 | 91.7% | 109 |
-| Karachi | 1.1261 | 1.1429 | 87.2% | 109 |
-| Lahore | 1.4106 | 1.5613 | 82.6% | 109 |
-| Multan | 1.2555 | 1.263 | 89.9% | 109 |
+| Jacobabad | 1.1568 | 1.1196 | 91.7% | 108 |
+| Karachi | 1.1531 | 1.1734 | 86.1% | 108 |
+| Lahore | 1.4286 | 1.5508 | 84.3% | 108 |
+| Multan | 1.2285 | 1.2715 | 90.7% | 108 |
 
 | season | MAE | Baseline MAE | 80% coverage | Rows |
 |---|---|---|---|---|
-| Autumn | 1.1507 | 1.2156 | 87.8% | 196 |
-| Summer | 1.3009 | 1.3154 | 87.9% | 240 |
+| Autumn | 1.139 | 1.2099 | 86.5% | 200 |
+| Summer | 1.3303 | 1.3382 | 89.7% | 232 |
 
 ## Limitations
 - The gain over the persistence baseline is small. Treat the median forecast as a modest improvement, not a large one.
