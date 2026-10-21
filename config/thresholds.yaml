@@ -1,0 +1,16 @@
+temp_c:        {min: -5, max: 55}
+humidity_pct:  {min: 0, max: 100}
+max_fill_gap_hours: 3
+source_diff_temp_c: 3
+stale_after_hours: 3
+max_hourly_jump_c: 8
+heatwave_day_temp_c: 40
+heatwave_min_days: 3
+source_diff_rh_pct: 15
+
+risk_levels:
+  - {name: Normal,          min_hi_c: -100}
+  - {name: Caution,         min_hi_c: 27}
+  - {name: Extreme Caution, min_hi_c: 32}
+  - {name: Danger,          min_hi_c: 41}
+  - {name: Extreme Danger,  min_hi_c: 54}

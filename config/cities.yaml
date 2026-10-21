@@ -1,0 +1,5 @@
+cities:
+  Karachi:   {lat: 24.8607, lon: 67.0011}
+  Lahore:    {lat: 31.5204, lon: 74.3587}
+  Multan:    {lat: 30.1575, lon: 71.5249}
+  Jacobabad: {lat: 28.2769, lon: 68.4514}

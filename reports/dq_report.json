@@ -1,0 +1,73 @@
+{
+  "run_at_utc": "2026-10-21T12:31:05.459750+00:00",
+  "overall": "WARN",
+  "checks": [
+    {
+      "check": "range",
+      "status": "PASS",
+      "n_bad": 0,
+      "n_total": 70420,
+      "detail": {}
+    },
+    {
+      "check": "jumps",
+      "status": "WARN",
+      "n_bad": 9,
+      "n_total": 70420,
+      "detail": {
+        "Jacobabad": 1,
+        "Karachi": 0,
+        "Lahore": 6,
+        "Multan": 2
+      }
+    },
+    {
+      "check": "gaps",
+      "status": "PASS",
+      "n_bad": 0,
+      "n_total": 70420,
+      "detail": {
+        "Jacobabad": 0,
+        "Karachi": 0,
+        "Lahore": 0,
+        "Multan": 0
+      }
+    },
+    {
+      "check": "crosscheck",
+      "status": "WARN",
+      "n_bad": 90,
+      "n_total": 2904,
+      "detail": {
+        "Jacobabad": 16,
+        "Karachi": 1,
+        "Lahore": 57,
+        "Multan": 16
+      }
+    },
+    {
+      "check": "crosscheck_rh",
+      "status": "WARN",
+      "n_bad": 238,
+      "n_total": 2904,
+      "detail": {
+        "Jacobabad": 47,
+        "Karachi": 28,
+        "Lahore": 114,
+        "Multan": 49
+      }
+    },
+    {
+      "check": "staleness",
+      "status": "PASS",
+      "n_bad": 0,
+      "n_total": 4,
+      "detail": {
+        "Jacobabad": 0.5,
+        "Karachi": 0.5,
+        "Lahore": 0.5,
+        "Multan": 0.5
+      }
+    }
+  ]
+}

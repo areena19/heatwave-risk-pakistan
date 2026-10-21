@@ -1,0 +1,17 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+*.duckdb
+data/raw/*
+data/cleaned/*
+data/processed/*
+!data/**/.gitkeep
+
+@"
+
+.pytest_cache/
+.vscode/
+logs/
+data/quarantine/
+"@ | Add-Content .gitignore

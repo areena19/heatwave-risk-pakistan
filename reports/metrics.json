@@ -1,0 +1,56 @@
+{
+  "test_rows": 436,
+  "test_mae": 1.2334,
+  "baseline_mae": 1.2705,
+  "coverage_80": 0.8784,
+  "raw_coverage": 0.7362,
+  "interval_width": 4.8,
+  "test_start": "2026-07-03",
+  "test_end": "2026-10-19",
+  "by_city": [
+    {
+      "city": "Jacobabad",
+      "mae": 1.1413,
+      "baseline_mae": 1.1149,
+      "coverage_80": 0.9174,
+      "rows": 109
+    },
+    {
+      "city": "Karachi",
+      "mae": 1.1261,
+      "baseline_mae": 1.1429,
+      "coverage_80": 0.8716,
+      "rows": 109
+    },
+    {
+      "city": "Lahore",
+      "mae": 1.4106,
+      "baseline_mae": 1.5613,
+      "coverage_80": 0.8257,
+      "rows": 109
+    },
+    {
+      "city": "Multan",
+      "mae": 1.2555,
+      "baseline_mae": 1.263,
+      "coverage_80": 0.8991,
+      "rows": 109
+    }
+  ],
+  "by_season": [
+    {
+      "season": "Autumn",
+      "mae": 1.1507,
+      "baseline_mae": 1.2156,
+      "coverage_80": 0.8776,
+      "rows": 196
+    },
+    {
+      "season": "Summer",
+      "mae": 1.3009,
+      "baseline_mae": 1.3154,
+      "coverage_80": 0.8792,
+      "rows": 240
+    }
+  ]
+}
