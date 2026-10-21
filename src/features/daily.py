@@ -1,7 +1,5 @@
 import os
-
 import pandas as pd
-
 from src.features.heat_index import heat_index_c
 
 
@@ -27,8 +25,10 @@ def main():
     )
 
     print("Days before dropping partial days:", len(daily))
-    daily = daily[daily["n_hours"] == 24].drop(columns="n_hours")
-    print("Days after dropping partial days:", len(daily))
+    # Purane dinon ke 24 ghante chahiye, lekin aakhri din (aaj) ko prediction ke liye rakhna hai
+    max_d = daily["date"].max()
+    daily = daily[(daily["n_hours"] == 24) | ((daily["date"] == max_d) & (daily["n_hours"] >= 8))].drop(columns="n_hours")
+    print("Days after keeping latest day:", len(daily))
 
     os.makedirs("data/processed", exist_ok=True)
     daily.to_parquet("data/processed/daily.parquet", index=False)

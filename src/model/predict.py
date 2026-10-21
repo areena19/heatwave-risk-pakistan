@@ -1,5 +1,6 @@
 import json
 import pickle
+import pandas as pd
 
 from src.model.calibrate import get_bounds
 from src.model.risk import risk_from_forecast
@@ -20,9 +21,12 @@ def forecast_latest():
     rows = []
     for _, r in latest.iterrows():
         risk = risk_from_forecast(r["lo"], r["p50"], r["hi"])
+        # Next day / tomorrow ki date
+        tomorrow_date = (pd.to_datetime(r["date"]) + pd.Timedelta(days=1)).strftime("%Y-%m-%d")
         rows.append({
             "city": r["city"],
-            "last_date": str(r["date"].date()),
+            "input_features_from": str(r["date"].date()),
+            "forecast_for_date": f"{tomorrow_date} (Tomorrow)",
             "lo": round(float(r["lo"]), 1),
             "p50": round(float(r["p50"]), 1),
             "hi": round(float(r["hi"]), 1),
