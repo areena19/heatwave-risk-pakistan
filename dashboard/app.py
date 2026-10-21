@@ -59,7 +59,12 @@ with st.sidebar:
     st.markdown("### 🌐 Operational Scope")
     city = st.selectbox("Monitoring Station", cities, index=0)
     st.markdown("---")
-    st.info("**Conformal Coverage:** 80% nominal\n\n**Feeds:** Open-Meteo & NASA POWER")
+    st.markdown("### ⚙️ Calibration Specs")
+    st.info(
+        "**Active Engine:** LightGBM  \n*(🏆 3-Model Tournament Winner)*\n\n"
+        "**Conformal Guarantee:** 80% nominal\n\n"
+        "**Feeds:** Open-Meteo & NASA POWER"
+    )
 
 sub = gf[gf["city"] == city].sort_values("date")
 
